@@ -1,0 +1,23 @@
+{
+  "pagesFallback": {
+    "name": "Home"
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About"
+    },
+    {
+      "name": "Components",
+      "children": [
+        {
+          "name": "webc-container",
+          "tag": "webc-container"
+        }
+      ]
+    }
+  ]
+}
