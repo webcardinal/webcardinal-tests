@@ -8,14 +8,23 @@
       "path": "/"
     },
     {
-      "name": "About"
-    },
-    {
-      "name": "Components",
+      "name": "Tests",
       "children": [
         {
           "name": "webc-container",
           "tag": "webc-container"
+        },
+        {
+          "name": "webc-template",
+          "tag": "webc-template"
+        },
+        {
+          "name": "data-if",
+          "tag": "data-if"
+        },
+        {
+          "name": "data-for",
+          "tag": "data-for"
         }
       ]
     }

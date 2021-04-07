@@ -1,18 +1,20 @@
 <style>
-  #homepage {
-    --spacing: 1rem;
-    padding: var(--spacing);
-  }
-  #homepage > .components {
-    display: block;
-    padding: var(--spacing) 0;
-  }
-
+  section { margin-bottom: 1rem; }
+  section p { padding: 0.15rem 0; }
+  #homepage > .components { display: grid; }
 </style>
 <div id="homepage">
+  <section>
+    <p>Environments for E2E testing.</p>
+    <p>This is the page used for routing inside tests.</p>
+    <p>Check <code>index.ts</code> from this environment.</p>
+  </section>
   <section class="components">
     <div>Go to:</div>
+    <webc-link tag="data-for">data-for</webc-link>
+    <webc-link tag="data-if">data-if</webc-link>
     <webc-link tag="webc-container">webc-container</webc-link>
+    <webc-link tag="webc-template">webc-template</webc-link>
   </section>
 </div>
 

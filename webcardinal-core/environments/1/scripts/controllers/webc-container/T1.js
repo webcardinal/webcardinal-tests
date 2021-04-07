@@ -3,7 +3,7 @@ const { Controller } = WebCardinal.controllers;
 export default class extends Controller {
     constructor(element, history) {
         super(element, history);
-        this.setModel({
+        this.model = {
           title: 'Title!',
           description: 'This is our Description!',
           class: 'surprise',
@@ -16,6 +16,6 @@ export default class extends Controller {
             custom: 'custom-attribute',
             tag: 'div-tag'
           }
-        });
+        };
     }
 }

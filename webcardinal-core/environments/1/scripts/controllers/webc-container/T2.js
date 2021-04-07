@@ -3,7 +3,7 @@ const { Controller } = WebCardinal.controllers;
 export default class extends Controller {
     constructor(element, history) {
         super(element, history);
-        this.setModel({ number: 0 });
+        this.model = { number: 0 };
 
         this.onTagClick('number-increment', (_m, _t, event) => {
           event.preventDefault();
