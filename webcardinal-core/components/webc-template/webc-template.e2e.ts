@@ -2,32 +2,11 @@ import { E2EElement } from '@stencil/core/testing';
 import { HYDRATED_CLASS, initTest } from '../../utils';
 import environment from '../../environments/1';
 
-function* foo(index) {
-  while (true) {
-    yield index;
-    index++;
-  }
-}
-
-const iterator = foo(0);
-
-const output = async (prefix) => {
-  const fs = await import('fs');
-  const beautify = require('beautify');
-  let metadata = `<!--\n${JSON.stringify(environment.state, null, 2)}\n-->\n`
-  let root = await environment.page.find('webc-app-root');
-  let html = beautify(root.innerHTML, {format: 'html'});
-  fs.writeFileSync(`@output/${iterator.next().value}.${prefix}.html`, metadata + html);
-}
-
 describe('webc-template', () => {
   beforeEach(async () => await initTest(environment));
 
   describe('it does binding', () => {
     beforeEach(() => (environment.state = { tag: 'webc-template', controller: 'T1' }));
-
-    // beforeEach(async () => await output('before'));
-    // afterEach(async () => await output('after'));
 
     async function getTemplate(testIdentifier) {
       const templateElement = await environment.getTestElement(testIdentifier);
