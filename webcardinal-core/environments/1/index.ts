@@ -62,7 +62,7 @@ class Environment {
     await loaderElement.callMethod('componentOnReady');
     expect(loaderElement).toHaveClass(HYDRATED_CLASS);
 
-    if (loaderElement.getAttribute('path') !== '/') {
+    if (loaderElement.getAttribute('src') !== './pages/home.html') {
       return loaderElement;
     }
 
